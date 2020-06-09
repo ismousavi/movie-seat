@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #242333;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.movie-container {
+    margin: 10px 0;
+}
+
+.movie-container select {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.seat {
+    background: #444451;
+    height: 20px;
+    width: 21px;
+    margin: 0.2rem;
+    border-radius: 10px 10px 0 0;
+    transition: all 500ms ease;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+.seat.occupied {
+    background: #fff;
+}
+
+.seat:nth-child(2) {
+    margin-right: 1rem;
+}
+
+.seat:nth-child(6) {
+    margin-right: 1rem;
+}
+
+.container .seat:not(.occupied):hover {
+    transform: scale(1.2);
+    background-color: #6feaf6;
+    cursor: pointer;
+}
+
+#showcase {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+}
+
+#showcase li small {
+    margin-left: 2px;
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 10px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.6);
+}
+
+p.text span {
+    color: #6feaf6;
+}
+
+@media(min-width: 867px) {
+    .movie-container select {
+        font-size: 18px;
+    }
+    .seat {
+        background: #444451;
+        height: 25px;
+        width: 26px;
+        margin: 8px;
+    }
+    .seat:nth-child(2) {
+        margin-right: 2rem;
+    }
+    .seat:nth-child(6) {
+        margin-right: 2rem;
+    }
+    .screen {
+        height: 100px;
+    }
+}
