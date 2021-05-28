@@ -1,5 +1,5 @@
 # movie-seat
-A website made for entertainment.
+A website made for fun.
 #### Technologies:
 - HTML
 - CSS
